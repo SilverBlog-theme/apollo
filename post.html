@@ -1,0 +1,12 @@
+{% include system_config.Theme+"/include/header.html" %}
+            <div class="post">
+                <article class="post-block">
+                    <h1 class="post-title">{{ page_info.title }}</h1>
+                    <div class="post-info" title="{{ page_info.time }}">{{ page_info.time }}</div>
+                    <div class="post-content">{{ content|safe }}</div>
+                </article>
+            </div>
+        </main>
+        <footer>
+            {% include "include/comment.html" %}
+{% include system_config.Theme+"/include/footer.html" %}
