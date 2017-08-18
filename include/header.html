@@ -17,7 +17,7 @@
             <a href="/" class="logo-link"><img src="{{ system_config.Author_Image }}" alt="{{ system_config.Author_Name }}"></a>
             <ul class="nav nav-list">
                 <li class="nav-list-item"><a href="/" target="_self" class="nav-list-link active">BLOG</a></li>{% for item in menu_list %}
-                <li class="nav-list-item"><a href="{% if "absolute" not in item %}/{% elif not item.absolute %}/{% endif %}{{ item.url }}{% if static %}.html{% endif %}" target="_self" class="nav-list-link">{{ item.name }}</a></li>{% endfor %}
+                <li class="nav-list-item"><a href="{% if "absolute" not in item %}/{% elif not item.absolute %}/{% endif %}{{ item.name }}{% if static %}.html{% endif %}" target="_self" class="nav-list-link">{{ item.title }}</a></li>{% endfor %}
                 <li class="nav-list-item"><a href="/rss" target="_self" class="nav-list-link">RSS</a></li>
             </ul>
         </header>
