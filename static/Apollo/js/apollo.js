@@ -22,6 +22,24 @@ timeSince = function (date) {
     }
 }
 
+(function(){
+    var re = new RegExp('.*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?((?:[a-z][a-z]+))',["i"]);
+    var re_return = location.href.match(re);
+    var tDiv = document.getElementById("nav-tab"),
+        links = tDiv.getElementsByTagName("a"),
+        index = 0,
+        url = re_return[1]
+    if(url!==null){
+        for (var i=links.length; i--;) {
+            if(links[i].href.indexOf(url) !== -1){
+                index = i;
+                break;
+            }
+        }
+    }
+    links[index].className = 'nav-list-link active';
+})();
+
 var dateItem = document.getElementsByClassName("post-info");
 for (var i in dateItem) {
     if (dateItem[i].innerHTML != "") {
