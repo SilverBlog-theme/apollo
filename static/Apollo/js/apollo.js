@@ -25,8 +25,8 @@ timeSince = function (date) {
 (function(){
     var re = new RegExp('.*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?((?:[a-z][a-z]+))',["i"]);
     var re_return = location.href.match(re);
-    var tDiv = document.getElementById("nav-tab"),
-        links = tDiv.getElementsByTagName("a"),
+    var nav_div = document.getElementsByClassName("nav nav-list"),
+        links = nav_div.getElementsByTagName("a"),
         index = 0,
         url = re_return[1]
     if(url!==null){
