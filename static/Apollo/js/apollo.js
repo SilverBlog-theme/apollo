@@ -22,23 +22,20 @@ timeSince = function (date) {
     }
 };
 
-(function(){
-    var re = new RegExp('.*?\\/.*?\\/.*?(\\/)((?:[a-z][a-z]+))',["i"]);
-    var re_return = location.href.match(re);
-    var nav_div = document.getElementById("nav-list");
-    var links = nav_div.getElementsByTagName("a");
-    var index = 0;
-    if(re_return!==null){
-        var url = re_return[2];
-        for (var i=links.length; i--;) {
-            if(links[i].href.indexOf(url) !== -1){
-                index = i;
-                break;
-            }
+var uri = new URL(location.href);
+var nav_div = document.getElementById("nav-list");
+var links = nav_div.getElementsByTagName("a");
+var index = 0;
+var url_path = uri.pathname.replace(/\//g, "");
+if(url_path!==""){
+    for (var i=links.length; i--;) {
+        if(links[i].href.indexOf(url_path) !== -1){
+            index = i;
+            break;
         }
     }
-    links[index].className = 'nav-list-link active';
-})();
+}
+links[index].className = 'nav-list-link active';
 
 var dateItem = document.getElementsByClassName("post-info");
 for (var i in dateItem) {
