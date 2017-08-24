@@ -20,16 +20,24 @@ timeSince = function (date) {
             i += 1;
         }
     }
-}
+};
 
 (function(){
-    var re = new RegExp('.*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?(?:[a-z][a-z]+).*?((?:[a-z][a-z]+))',["i"]);
+          var re1='.*?';	// Non-greedy match on filler
+      var re2='\\/';	// Uninteresting: c
+      var re3='.*?';	// Non-greedy match on filler
+      var re4='\\/';	// Uninteresting: c
+      var re5='.*?';	// Non-greedy match on filler
+      var re6='(\\/)';	// Any Single Character 1
+      var re7='((?:[a-z][a-z]+))';	// Word 1
+
+    var re = new RegExp(re1+re2+re3+re4+re5+re6+re7,["i"]);
     var re_return = location.href.match(re);
-    var nav_div = document.getElementById("nav-list"),
-        links = nav_div.getElementsByTagName("a"),
-        index = 0,
-        url = re_return[1]
-    if(url!==null){
+    var nav_div = document.getElementById("nav-list");
+    var links = nav_div.getElementsByTagName("a");
+    var index = 0;
+    if(re_return!==null){
+        var url = re_return[1];
         for (var i=links.length; i--;) {
             if(links[i].href.indexOf(url) !== -1){
                 index = i;
