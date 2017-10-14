@@ -6,7 +6,7 @@
 
 ``` bash
 cd templates
-curl https://raw.githubusercontent.com/SilverBlogTeam/Apollo/master/install.sh | bash
+curl https://raw.githubusercontent.com/SilverBlogTheme/Apollo/master/install.sh | bash
 ```
 
 ## 启用
