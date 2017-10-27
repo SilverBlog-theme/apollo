@@ -21,7 +21,7 @@
                     {% if "absolute" in item %}
                         {% set url = item.absolute %}
                     {% else %}
-                        {% set url = "/"+item.name %}
+                        {% set url = "/"+item.name+"/"+ %}
                     {% endif %}
                 <li class="nav-list-item"><a href="{{url}}{% if static %}.html{% endif %}" target="_self" class="nav-list-link">{{ item.title }}</a></li>
                 {% endfor %}
