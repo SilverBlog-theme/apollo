@@ -29,7 +29,7 @@ var index = 0;
 var url_path = uri.pathname;
 if(url_path!==""){
     for (var i=links.length; i--;) {
-        if(links[i].href.indexOf(url_path) !== -1){
+        if(links[i].href==url_path){
             index = i;
             break;
         }
