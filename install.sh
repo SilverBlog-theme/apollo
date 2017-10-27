@@ -6,7 +6,7 @@ fi
 if [ ! -d "Apollo" ]; then
     git clone https://github.com/SilverBlogTeam/Apollo.git
     cd Apollo
-    ln -s $(pwd)/static/Apollo ../static/Apollo
+    ln -s $(pwd)/static ../static/Apollo
 fi
 if [ -f "config.json" ]; then
     cp config.example.json config.json
