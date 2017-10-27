@@ -27,7 +27,6 @@ var nav_div = document.getElementById("nav-list");
 var links = nav_div.getElementsByTagName("a");
 var index = 0;
 var url_path = uri.pathname;
-url_path = url_path.replace(/\//g, "");
 if(url_path!==""){
     for (var i=links.length; i--;) {
         if(links[i].href.indexOf(url_path) !== -1){
