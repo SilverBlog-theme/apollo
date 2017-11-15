@@ -3,9 +3,9 @@ if [ $(basename `pwd`) != "templates" ];then
     echo "[Error] Please do this in the templates directory!"
     exit
 fi
-if [ ! -d "Apollo" ]; then
+if [ ! -d "apollo" ]; then
     git clone https://github.com/SilverBlogTeam/apollo.git
-    cd Apollo
+    cd apollo
     ln -s $(pwd)/static ../static/apollo
 fi
 if [ -f "config.json" ]; then
