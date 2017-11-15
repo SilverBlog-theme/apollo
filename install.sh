@@ -4,9 +4,9 @@ if [ $(basename `pwd`) != "templates" ];then
     exit
 fi
 if [ ! -d "Apollo" ]; then
-    git clone https://github.com/SilverBlogTeam/Apollo.git
+    git clone https://github.com/SilverBlogTeam/apollo.git
     cd Apollo
-    ln -s $(pwd)/static ../static/Apollo
+    ln -s $(pwd)/static ../static/apollo
 fi
 if [ -f "config.json" ]; then
     cp config.example.json config.json
