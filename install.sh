@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
+templates_name = apollo
 if [ $(basename `pwd`) != "templates" ];then
     echo "[Error] Please do this in the templates directory!"
     exit
 fi
-if [ ! -d "apollo" ]; then
-    git clone https://github.com/SilverBlogTeam/apollo.git
+if [ ! -d ${templates_name} ]; then
+    git clone https://github.com/SilverBlogTeam/${templates_name}.git
 fi
-ln -sv ../apollo/static ./static/apollo
+ln -sv ../${templates_name}/static ./static/${templates_name}
 cd apollo
 if [ -f "config.json" ]; then
     cp config.example.json config.json
