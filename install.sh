@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-templates_name = apollo
+templates_name = "apollo"
 if [ $(basename `pwd`) != "templates" ];then
     echo "[Error] Please do this in the templates directory!"
     exit
@@ -8,7 +8,7 @@ if [ ! -d ${templates_name} ]; then
     git clone https://github.com/SilverBlogTeam/${templates_name}.git
 fi
 ln -sv ../${templates_name}/static ./static/${templates_name}
-cd apollo
+cd ${templates_name}
 if [ -f "config.json" ]; then
     cp config.example.json config.json
     vim config.json
