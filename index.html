@@ -3,14 +3,14 @@
                 {% for page_info in page_list %}
                 <li class="post-list-item">
                     <article class="post-block">
-                        <h2 class="post-title"><a href="/{{ page_info.name }}{% if static %}.html{% endif %}" class="post-title-link">{{ page_info.title }}</a></h2>
+                        <h2 class="post-title"><a href="/{{ page_info.name }}" class="post-title-link">{{ page_info.title }}</a></h2>
                         <div class="post-info" title="{{ page_info.time }}">{{ page_info.time }}</div>
                         <div class="post-content"><p>{{ page_info.excerpt }}</p></div>
-                        <a href="/{{ page_info.name }}{% if static %}.html{% endif %}" class="read-more">... 阅读全文</a>
+                        <a href="/{{ page_info.name }}" class="read-more">... 阅读全文</a>
                     </article>
                 </li>{% endfor %}
             </ul>
         </main>
         <footer>
-            <div class="paginator">{% if now_page!=1 %}<a class="prev" href="/index/p/{{ now_page - 1 }}{% if static %}.html{% endif %}">上一页</a>{% endif %}{% if now_page!=page_row and page_row !=1 %}<a class="next" href="/index/p/{{ now_page + 1 }}{% if static %}.html{% endif %}">下一页</a>{% endif %}</div>
+            <div class="paginator">{% if now_page!=1 %}<a class="prev" href="/index/{{ now_page - 1 }}{% if static %}.html{% endif %}">上一页</a>{% endif %}{% if now_page!=page_row and page_row !=1 %}<a class="next" href="/index/{{ now_page + 1 }}">下一页</a>{% endif %}</div>
 {% include system_config.Theme+"/include/footer.html" %}
