@@ -12,5 +12,5 @@
             </ul>
         </main>
         <footer>
-            <div class="paginator">{% if now_page!=1 %}<a class="prev" href="/index/{{ now_page - 1 }}{% if static %}.html{% endif %}">上一页</a>{% endif %}{% if now_page!=page_row and page_row !=1 %}<a class="next" href="/index/{{ now_page + 1 }}">下一页</a>{% endif %}</div>
+            <div class="paginator">{% if now_page!=1 %}<a class="prev" href="/index/{{ now_page - 1 }}">上一页</a>{% endif %}{% if now_page!=page_row and page_row !=1 %}<a class="next" href="/index/{{ now_page + 1 }}">下一页</a>{% endif %}</div>
 {% include system_config.Theme+"/include/footer.html" %}
