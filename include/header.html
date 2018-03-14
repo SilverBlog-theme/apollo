@@ -7,8 +7,7 @@
         <link href="/static/apollo/css/apollo.css" rel="stylesheet">
         <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css" rel="stylesheet">
         {% if page_info.title=="index" %}{% set title=system_config.Project_Name %}{% else %}{% set title=page_info.title %}{% endif %}<title>{{ title }}</title>
-        {% if page_info.title=="index" %}{% set description=system_config.Project_Description %}{% else %}{% set description=page_info.excerpt %}{% endif %}<meta name="description" content="{{ description }}">{% if now_page!=page_row and page_row !=1 %}
-        <link rel="next" href="/index/p/{{ now_page + 1 }}{% if static %}.html{% endif %}">{% endif %}
+        {% if page_info.title=="index" %}{% set description=system_config.Project_Description %}{% else %}{% set description=page_info.excerpt %}{% endif %}<meta name="description" content="{{ description }}">
         {% include "include/head.html" ignore missing %}
     </head>
     <body>
@@ -23,7 +22,7 @@
                     {% else %}
                         {% set url = "/"+item.name+"/" %}
                     {% endif %}
-                <li class="nav-list-item"><a href="{{url}}{% if static %}.html{% endif %}" target="_self" class="nav-list-link">{{ item.title }}</a></li>
+                <li class="nav-list-item"><a href="{{url}}" target="_self" class="nav-list-link">{{ item.title }}</a></li>
                 {% endfor %}
                 <li class="nav-list-item"><a href="/rss" target="_self" class="nav-list-link">RSS</a></li>
             </ul>
