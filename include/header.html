@@ -5,7 +5,7 @@
         <meta name="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/static/apollo/css/apollo.css" rel="stylesheet">
-        <link href="//cdn.bootcss.com/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css" rel="stylesheet">
         {% if page_info.title=="index" %}{% set title=system_config.Project_Name %}{% else %}{% set title=page_info.title %}{% endif %}<title>{{ title }}</title>
         {% if page_info.title=="index" %}{% set description=system_config.Project_Description %}{% else %}{% set description=page_info.excerpt %}{% endif %}<meta name="description" content="{{ description }}">
         {% include "include/head.html" ignore missing %}
