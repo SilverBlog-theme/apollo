@@ -1,13 +1,20 @@
+{%- if page_info.title=="index" -%}
+    {%- set title=system_config.Project_Name -%}
+    {% set description=system_config.Project_Description %}
+{%- else -%}
+    {%- set title=page_info.title -%}
+    {%- set description=page_info.excerpt -%}
+{%- endif -%}
 <!DOCTYPE html>
 <html lang="zh-Hans-CN">
     <head>
         <meta charset="utf-8">
         <meta name="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/static/apollo/css/apollo.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atelier-sulphurpool-light.min.css" rel="stylesheet">
-        {% if page_info.title=="index" %}{% set title=system_config.Project_Name %}{% else %}{% set title=page_info.title %}{% endif %}<title>{{ title }}</title>
-        {% if page_info.title=="index" %}{% set description=system_config.Project_Description %}{% else %}{% set description=page_info.excerpt %}{% endif %}<meta name="description" content="{{ description }}">
+        <title>{{ title }}</title>
+        <meta name="description" content="{{ description }}">
+        <link href="{{static_file['apollo.css']}}" rel="stylesheet">
+        <link href="{{static_file['atelier-sulphurpool-light.min.css']}}" rel="stylesheet">
         {% include "include/head.html" ignore missing %}
     </head>
     <body>
@@ -15,7 +22,7 @@
         <header>
             <a href="/" class="logo-link"><img src="{{ system_config.Author_Image }}" alt="{{ system_config.Author_Name }}"></a>
             <ul class="nav nav-list" id="nav-list">
-                <li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li>
+                <li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">{{i18n|get_i18n_value("home")}}</a></li>
                 {% for item in menu_list %}
                     {% if "absolute" in item %}
                         {% set url = item.absolute %}
@@ -24,7 +31,7 @@
                     {% endif %}
                 <li class="nav-list-item"><a href="{{url}}" target="_self" class="nav-list-link">{{ item.title }}</a></li>
                 {% endfor %}
-                <li class="nav-list-item"><a href="/rss" target="_self" class="nav-list-link">RSS</a></li>
+                <li class="nav-list-item"><a href="/rss" target="_self" class="nav-list-link">{{i18n|get_i18n_value("rss")}}</a></li>
             </ul>
         </header>
         <main class="container">

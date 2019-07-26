@@ -3,8 +3,11 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    <script src="/static/apollo/js/apollo.js"></script>
+    <script src="{{static_file['bplayer.min.js']}}"></script>
+    <script src="{{static_file['bp_init.js']}}"></script>
+    <script src="{{static_file['highlight.min.js']}}"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="{{static_file['apollo.js']}}"></script>
     {% include "include/foot.html" ignore missing %}
     </body>
 </html>

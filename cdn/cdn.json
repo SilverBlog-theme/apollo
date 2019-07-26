@@ -1,0 +1,8 @@
+{
+  "apollo.css": "/static/css/apollo.css",
+  "apollo.js": "/static/js/apollo.js",
+  "atelier-sulphurpool-light.min.css": "https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/atelier-sulphurpool-light.min.css",
+  "bplayer.min.js":"https://cdn.jsdelivr.net/npm/bplayer@1.0.7/dist/bplayer.min.js",
+  "bp_init.js": "https://cdn.jsdelivr.net/npm/bplayer@1.0.7/dist/bp_init.js",
+  "highlight.min.js": "https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/lib/highlight.min.js"
+}

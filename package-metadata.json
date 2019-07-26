@@ -1,0 +1,30 @@
+{
+  "name": "apollo",
+  "description": "A brilliant HTML5 blog theme to some different blog platform.",
+  "author": "Sean Sun, tcdw <tcdw2011@gmail.com>",
+  "bug": "https://github.com/silverblog-theme/apollo/issues",
+  "license": "MIT",
+  "homepage": "https://github.com/silverblog-theme/apollo",
+  "download": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/styles/atelier-sulphurpool-light.min.css",
+      "path": "highlight.js",
+      "filename": "atelier-sulphurpool-light.min.css"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/highlight.js@9.13.1/lib/highlight.min.js",
+      "path": "highlight.js",
+      "filename": "highlight.min.js"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/bplayer@1.0.7/dist/bplayer.min.js",
+      "path": "bplayer",
+      "filename": "bplayer.min.js"
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/bplayer@1.0.7/dist/bp_init.js",
+      "path": "bplayer",
+      "filename": "bp_init.js"
+    }
+  ]
+}
